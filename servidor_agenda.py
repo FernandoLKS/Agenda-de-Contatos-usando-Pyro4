@@ -45,8 +45,8 @@ def main():
     daemon = Pyro4.Daemon()    
     uri = daemon.register(AgendaServidor)
     print("URI do objeto: ", uri)
-    #ns = Pyro4.locateNS()
-    #ns.register("KLEIN_ROCHA", uri)
+    ns = Pyro4.locateNS()
+    ns.register("KLEIN_ROCHA", uri)
 
     SerializerBase.register_dict_to_class("objeto_agenda.Objeto", objeto_agenda.dict_to_class)
     SerializerBase.register_class_to_dict(objeto_agenda.Objeto, objeto_agenda.class_to_dict)

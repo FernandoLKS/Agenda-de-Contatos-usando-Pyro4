@@ -7,8 +7,8 @@ import time
 
 def main():
     
-    #AgendaProxy = Pyro4.Proxy("PYRONAME:KLEIN_ROCHA")
-    AgendaProxy = Pyro4.Proxy("PYRO:obj_470ce0a9a38b43a89c93101d5a597474@localhost:55032")
+    AgendaProxy = Pyro4.Proxy("PYRONAME:KLEIN_ROCHA")
+    #AgendaProxy = Pyro4.Proxy("PYRO:obj_88ab0a87f5c94cb8be2d2fde9d6c9dca@localhost:58917")
     try:
         AgendaProxy._pyroBind()
     except:
